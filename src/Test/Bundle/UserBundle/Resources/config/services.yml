@@ -1,0 +1,9 @@
+parameters:
+    test_user.registration.form.type: Test\Bundle\UserBundle\Form\Type\RegistrationFormType
+
+services:
+    test_user.registration.form.type:
+        class: %test_user.registration.form.type%
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: test_user_registration }

@@ -1,0 +1,29 @@
+Test\Component\Model\User\User:
+    type: entity
+    table: users
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        forename:
+            type: string
+            length: 100
+            nullable: true
+        surname:
+            type: string
+            length: 100
+            nullable: true
+        createdOn:
+            type: datetime
+            column: created_on
+            gedmo:
+                timestampable:
+                    on: create
+        updatedOn:
+            type: datetime
+            column: updated_on
+            gedmo:
+                timestampable:
+                    on: update
