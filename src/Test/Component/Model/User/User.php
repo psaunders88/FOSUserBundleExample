@@ -50,43 +50,93 @@ class User extends FOSBaseUser
         parent::__construct();
     }
     
-    public function getId() {
+    /**
+     * Get user id
+     * 
+     * @return integer
+     */
+    public function getId()
+    {
         return $this->id;
     }
 
-    public function getForename() {
+    /**
+     * Get user forename
+     * 
+     * @return string
+     */
+    public function getForename()
+    {
         return $this->forename;
     }
 
-    public function getSurname() {
+    /**
+     * Get surname
+     * 
+     * @return string
+     */
+    public function getSurname()
+    {
         return $this->surname;
     }
 
-    public function getCreatedOn() {
+    /**
+     * Get created on date
+     * 
+     * @return \DateTime
+     */
+    public function getCreatedOn()
+    {
         return $this->createdOn;
     }
 
-    public function getUpdatedOn() {
+    /**
+     * Get update on date
+     * 
+     * @return \DateTime
+     */
+    public function getUpdatedOn()
+    {
         return $this->updatedOn;
     }
 
-    public function setId($id) {
-        $this->id = $id;
-    }
-
-    public function setForename($forename) {
+    /**
+     * Set forename
+     * 
+     * @param string $forename
+     */
+    public function setForename($forename)
+    {
         $this->forename = $forename;
     }
 
-    public function setSurname($surname) {
+    /**
+     * Set surname
+     * 
+     * @param string $surname
+     */
+    public function setSurname($surname)
+    {
         $this->surname = $surname;
     }
 
-    public function setCreatedOn(\DateTime $createdOn) {
+    /**
+     * Set data created on
+     * 
+     * @param \DateTime $createdOn
+     */
+    public function setCreatedOn(\DateTime $createdOn)
+    {
         $this->createdOn = $createdOn;
     }
 
-    public function setUpdatedOn(\DateTime $updatedOn) {
+    /**
+     * Set date user last updated
+     * 
+     * @param \DateTime $updatedOn
+     */
+    public function setUpdatedOn(\DateTime $updatedOn)
+    {
         $this->updatedOn = $updatedOn;
     }
 }
